@@ -1,18 +1,18 @@
-#SC-as-aGRNs
+# SC-as-aGRNs
 This package will generate its own modified graph as an artificial gene regulatory network. Then it will make the whole genome duplicated version of the created networks (WGD) for comparing their performance and differences in various environments.
 
-#requirments:
+# Requirments:
 1- makefile
 2- C/C++ compiler (version 11 or higher preferred)
 3- for using a network of 10 nodes, 2G ram is required.
 ** for the MPI version, openmpi is required. Also, the MPI code is written for a cluster of 13 processes. Thus if you want to run the code on a computer with a different number of nodes, please edit the code or consider running the code on a system with min 13 processors.
 
 
-#Running the code:
+# Running the code:
 in linux: To run the code, please go the directory and type 'make'. After the make process finished, the excutable file will be saved in the directory of 
 ./..(all versions)/Exe/Final.out
 
-Order of the code:
+# Order of the code:
 1- first go to the 'Network-Generator' and run the code to generate networks that is needed. The default network size is 10, and the number of generated networks is 100k. You can change the network size in the /..(all versions)/Main/Main.cpp. If you want different number of networks, then you can change it 
 ./Network-Generator/Functions/start.cpp. After reaching there, in the line of 9, 'QWER' parameter is the number of generated networks and you can change it as you want.
 
