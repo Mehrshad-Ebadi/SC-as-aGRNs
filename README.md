@@ -1,5 +1,5 @@
 # SC-as-aGRNs
-This package generate modified scale free networks to serve as artificial gene regulatory networks and their duplicateds versions simulating the result of whole genome duplication (WGD), allowing subsequent comparisson of their performance and differences in various environments.
+This package generates modified scale free networks to serve as artificial gene regulatory networks and their duplicated versions simulating the result of whole genome duplication (WGD). It allows comparisson of their performance and differences in various environments. Additional information can be found in [Ebadi et al. 2013](https://www.vandepeerlab.org/people/meeba). In the folder network examples you can find some graphical examples of the networks generated and their duplicates. 
 
 # Requirments:
 1. makefile
