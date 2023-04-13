@@ -1,22 +1,21 @@
 # SC-as-aGRNs
-This package will generate its own modified graph as an artificial gene regulatory network. Then it will make the whole genome duplicated version of the created networks (WGD) for comparing their performance and differences in various environments.
+This package generate modified scale free networks to serve as artificial gene regulatory networks and their duplicateds versions simulating the result of whole genome duplication (WGD), allowing subsequent comparisson of their performance and differences in various environments.
 
 # Requirments:
-1- makefile
-2- C/C++ compiler (version 11 or higher preferred)
-3- for using a network of 10 nodes, 2G ram is required.
-** for the MPI version, openmpi is required. Also, the MPI code is written for a cluster of 13 processes. Thus if you want to run the code on a computer with a different number of nodes, please edit the code or consider running the code on a system with min 13 processors.
+1. makefile
+2. C/C++ compiler (version 11 or higher preferred)
+3. 8 GB of RAM for a network of 100 nodes
+
+** for the MPI version, openmpi is required. The MPI code is written for a cluster of 13 processes. If you want to run the code on a computer with a different number of nodes, please edit the code or consider running the code on a system with at least 13 processors.
 
 
 # Running the code:
 in linux: To run the code, please go the directory and type 'make'. After the make process finished, the excutable file will be saved in the directory of 
 ./..(all versions)/Exe/Final.out
 
-# Order of the code:
-1- first go to the 'Network-Generator' and run the code to generate networks that is needed. The default network size is 10, and the number of generated networks is 100k. You can change the network size in the /..(all versions)/Main/Main.cpp. If you want different number of networks, then you can change it 
-./Network-Generator/Functions/start.cpp. After reaching there, in the line of 9, 'QWER' parameter is the number of generated networks and you can change it as you want.
+# Workflow:
+1. Go to the 'Network-Generator' and run the code to generate the networks you require. By default the network generator generates 100k networks of  size 10 and their duplicated versions. Network size can be adjusted in /..(all versions)/Main/Main.cpp. The number of networks can be adjusted by changing the 'QWER' parameter on lin 9 of ./Network-Generator/Functions/start.cpp.
 
-2- for each different scenario, you have to copy the generated networks to the directory of that scenario. To do that, for example you want to run the code of 'different input' scenario. First you have to generate enough networks (we used 400 networks in the main script) from the network generator code, and then you have to copy the ./Network-Generator/Results to the ./Different-input. After that, the code is ready for run. Results will be saved in two folders: output and angles. Results of the outputs is the mean value of the 'output nodes' and the results in the angles is the exact value of both 'output nodes' of the network per input value. 
+2. For each different scenario, copy-paste the generated networks to the directory of the corresponding scenario. For example if you want to run the 'different input' scenario, you have to copy-paste the networks in ./Network-Generator/Results to ./Different-input, before running the code. Results will be saved in two folders: output and angles. The outputs give the mean value of the 'output nodes' and the angles the exact value of both 'output nodes' of the network per input value. 
  
 important: To run the fitness scenario, you have to copy both Results and Results_du from network generator to the fitness folder.
- 
